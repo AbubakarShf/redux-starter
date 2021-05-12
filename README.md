@@ -1,1 +1,3 @@
 # redux-starter
+
+### npm install
