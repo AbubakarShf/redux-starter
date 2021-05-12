@@ -1,3 +1,6 @@
+body {
+    overflow: hidden;
+}
 .App {
     display: flex;
     justify-content: center;
@@ -15,11 +18,55 @@
     font-size: 2rem;
     letter-spacing: 10px;
 }
-.App .Inc-btn {
+.App .btn-group {
+    display: flex;
+    width: 80vh;
+    justify-content: space-around;
+}
+.App .btn-group .Inc-btn,
+.App .btn-group .Dec-btn {
     font-size: 1rem;
     font-weight: 600;
     padding: 1rem;
-    width: 10rem;
     letter-spacing: 3px;
     cursor: pointer;
+    width: 40%;
+}
+@media only screen and (max-width: 1000px) {
+    .App .App-Name {
+        font-size: 2rem;
+    }
+    .App .Current-State {
+        font-size: 1.7rem;
+    }
+}
+@media only screen and (max-width: 510px) {
+    .App .btn-group {
+        width: 50vh;
+    }
+    .App .btn-group .Inc-btn,
+    .App .btn-group .Dec-btn {
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.5rem;
+        letter-spacing: 3px;
+        cursor: pointer;
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 308px) {
+    .App .App-Name {
+        font-size: 1.3rem;
+    }
+    .App .Current-State {
+        font-size: 1rem;
+    }
+    .App .btn-group {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .App .btn-group > button {
+        margin: 5px 0px;
+    }
 }
